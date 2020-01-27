@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include amazon_workflow *.css
+recursive-include amazon_workflow *.csv
+recursive-include amazon_workflow *.html
+recursive-include amazon_workflow *.ico
+recursive-include amazon_workflow *.js
+recursive-include amazon_workflow *.json
+recursive-include amazon_workflow *.md
+recursive-include amazon_workflow *.png
+recursive-include amazon_workflow *.py
+recursive-include amazon_workflow *.svg
+recursive-include amazon_workflow *.txt
+recursive-exclude amazon_workflow *.pyc
