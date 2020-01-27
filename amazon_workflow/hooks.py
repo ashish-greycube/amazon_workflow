@@ -57,6 +57,10 @@ app_license = "MIT"
 # before_install = "amazon_workflow.install.before_install"
 # after_install = "amazon_workflow.install.after_install"
 
+# Fixtures
+# ----------
+fixtures = ['Workflow', 'Workflow State', 'Workflow Action']
+
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
