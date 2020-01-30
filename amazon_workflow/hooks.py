@@ -59,7 +59,7 @@ app_license = "MIT"
 
 # Fixtures
 # ----------
-fixtures = ['Workflow', 'Workflow State', 'Workflow Action']
+fixtures = ['Workflow', 'Workflow State', 'Workflow Action Master']
 
 # Desk Notifications
 # ------------------
