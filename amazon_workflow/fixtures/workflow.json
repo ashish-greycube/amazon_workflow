@@ -1,0 +1,242 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow",
+  "document_type": "Issue",
+  "is_active": 1,
+  "modified": "2020-01-30 14:57:14.556126",
+  "name": "Amazon Bad Review",
+  "override_status": 0,
+  "parent": "Issue",
+  "parentfield": null,
+  "parenttype": null,
+  "send_email_alert": 1,
+  "states": [
+   {
+    "allow_edit": "Support Team",
+    "doc_status": "0",
+    "is_optional_state": 1,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Amazon Bad Review",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Open",
+    "update_field": "issue_type",
+    "update_value": null
+   },
+   {
+    "allow_edit": "Support Team",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Amazon Bad Review",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Contact Customer",
+    "update_field": "issue_type",
+    "update_value": "Amazon Bad Review"
+   },
+   {
+    "allow_edit": "Support Team",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Amazon Bad Review",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Replace",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Support Team",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Amazon Bad Review",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Refund",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Support Team",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Amazon Bad Review",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Escalated to Review Manager",
+    "update_field": null,
+    "update_value": null
+   },
+   {
+    "allow_edit": "Support Team",
+    "doc_status": "0",
+    "is_optional_state": 0,
+    "message": null,
+    "next_action_email_template": null,
+    "parent": "Amazon Bad Review",
+    "parentfield": "states",
+    "parenttype": "Workflow",
+    "state": "Closed",
+    "update_field": null,
+    "update_value": null
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Bad Review",
+    "allow_self_approval": 1,
+    "allowed": "Support Team",
+    "condition": null,
+    "next_state": "Contact Customer",
+    "parent": "Amazon Bad Review",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Open"
+   },
+   {
+    "action": "Agreed for Replace",
+    "allow_self_approval": 1,
+    "allowed": "Support Team",
+    "condition": "doc.issue_type==\"Amazon Bad Review\"",
+    "next_state": "Replace",
+    "parent": "Amazon Bad Review",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Contact Customer"
+   },
+   {
+    "action": "Agreed for Refund",
+    "allow_self_approval": 1,
+    "allowed": "Support Team",
+    "condition": "doc.issue_type==\"Amazon Bad Review\"",
+    "next_state": "Refund",
+    "parent": "Amazon Bad Review",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Contact Customer"
+   },
+   {
+    "action": "Escalate",
+    "allow_self_approval": 1,
+    "allowed": "Support Team",
+    "condition": "doc.issue_type==\"Amazon Bad Review\"",
+    "next_state": "Escalated to Review Manager",
+    "parent": "Amazon Bad Review",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Contact Customer"
+   },
+   {
+    "action": "Agreed to Offer",
+    "allow_self_approval": 1,
+    "allowed": "Support Team",
+    "condition": "doc.issue_type==\"Amazon Bad Review\"",
+    "next_state": "Closed",
+    "parent": "Amazon Bad Review",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Escalated to Review Manager"
+   },
+   {
+    "action": "Go Back",
+    "allow_self_approval": 1,
+    "allowed": "Support Team",
+    "condition": null,
+    "next_state": "Contact Customer",
+    "parent": "Amazon Bad Review",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Replace"
+   },
+   {
+    "action": "Go Back",
+    "allow_self_approval": 1,
+    "allowed": "Support Team",
+    "condition": null,
+    "next_state": "Contact Customer",
+    "parent": "Amazon Bad Review",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Refund"
+   },
+   {
+    "action": "Replacement Shipped",
+    "allow_self_approval": 1,
+    "allowed": "Support Team",
+    "condition": null,
+    "next_state": "Closed",
+    "parent": "Amazon Bad Review",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Replace"
+   },
+   {
+    "action": "Refund Initiated",
+    "allow_self_approval": 1,
+    "allowed": "Support Team",
+    "condition": null,
+    "next_state": "Closed",
+    "parent": "Amazon Bad Review",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Refund"
+   },
+   {
+    "action": "Go Back",
+    "allow_self_approval": 1,
+    "allowed": "Support Team",
+    "condition": null,
+    "next_state": "Contact Customer",
+    "parent": "Amazon Bad Review",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Escalated to Review Manager"
+   },
+   {
+    "action": "Re-Open",
+    "allow_self_approval": 1,
+    "allowed": "Support Team",
+    "condition": null,
+    "next_state": "Contact Customer",
+    "parent": "Amazon Bad Review",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Closed"
+   },
+   {
+    "action": "Save",
+    "allow_self_approval": 1,
+    "allowed": "Support Team",
+    "condition": null,
+    "next_state": "Open",
+    "parent": "Amazon Bad Review",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Open"
+   },
+   {
+    "action": "Go Back",
+    "allow_self_approval": 1,
+    "allowed": "Support Team",
+    "condition": null,
+    "next_state": "Open",
+    "parent": "Amazon Bad Review",
+    "parentfield": "transitions",
+    "parenttype": "Workflow",
+    "state": "Contact Customer"
+   }
+  ],
+  "workflow_name": "Amazon Bad Review",
+  "workflow_state_field": "workflow_state"
+ }
+]
