@@ -51,30 +51,6 @@
   "docstatus": 0,
   "doctype": "Workflow State",
   "icon": "",
-  "modified": "2020-01-30 14:29:13.621066",
-  "name": "Replace",
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null,
-  "style": "Warning",
-  "workflow_state_name": "Replace"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
-  "modified": "2020-01-30 14:29:20.873549",
-  "name": "Refund",
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null,
-  "style": "Danger",
-  "workflow_state_name": "Refund"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow State",
-  "icon": "",
   "modified": "2020-01-30 14:30:23.212066",
   "name": "Escalated to Review Manager",
   "parent": null,
@@ -106,5 +82,29 @@
   "parenttype": null,
   "style": "Warning",
   "workflow_state_name": "Open"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2020-02-01 14:56:04.957777",
+  "name": "To Ship Replacement",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "style": "Warning",
+  "workflow_state_name": "To Ship Replacement"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2020-02-01 14:59:06.071511",
+  "name": "To Refund",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "style": "Warning",
+  "workflow_state_name": "To Refund"
  }
 ]

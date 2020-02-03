@@ -4,7 +4,7 @@
   "doctype": "Workflow",
   "document_type": "Issue",
   "is_active": 1,
-  "modified": "2020-01-30 14:57:14.556126",
+  "modified": "2020-02-01 15:28:37.594024",
   "name": "Amazon Bad Review",
   "override_status": 0,
   "parent": "Issue",
@@ -47,9 +47,9 @@
     "parent": "Amazon Bad Review",
     "parentfield": "states",
     "parenttype": "Workflow",
-    "state": "Replace",
-    "update_field": null,
-    "update_value": null
+    "state": "To Ship Replacement",
+    "update_field": "",
+    "update_value": ""
    },
    {
     "allow_edit": "Support Team",
@@ -60,9 +60,9 @@
     "parent": "Amazon Bad Review",
     "parentfield": "states",
     "parenttype": "Workflow",
-    "state": "Refund",
-    "update_field": null,
-    "update_value": null
+    "state": "To Refund",
+    "update_field": "",
+    "update_value": ""
    },
    {
     "allow_edit": "Support Team",
@@ -74,8 +74,8 @@
     "parentfield": "states",
     "parenttype": "Workflow",
     "state": "Escalated to Review Manager",
-    "update_field": null,
-    "update_value": null
+    "update_field": "",
+    "update_value": ""
    },
    {
     "allow_edit": "Support Team",
@@ -87,8 +87,8 @@
     "parentfield": "states",
     "parenttype": "Workflow",
     "state": "Closed",
-    "update_field": null,
-    "update_value": null
+    "update_field": "status",
+    "update_value": "Closed"
    }
   ],
   "transitions": [
@@ -104,22 +104,22 @@
     "state": "Open"
    },
    {
-    "action": "Agreed for Replace",
+    "action": "Replace",
     "allow_self_approval": 1,
     "allowed": "Support Team",
     "condition": "doc.issue_type==\"Amazon Bad Review\"",
-    "next_state": "Replace",
+    "next_state": "To Ship Replacement",
     "parent": "Amazon Bad Review",
     "parentfield": "transitions",
     "parenttype": "Workflow",
     "state": "Contact Customer"
    },
    {
-    "action": "Agreed for Refund",
+    "action": "Refund",
     "allow_self_approval": 1,
     "allowed": "Support Team",
     "condition": "doc.issue_type==\"Amazon Bad Review\"",
-    "next_state": "Refund",
+    "next_state": "To Refund",
     "parent": "Amazon Bad Review",
     "parentfield": "transitions",
     "parenttype": "Workflow",
@@ -152,22 +152,22 @@
     "allow_self_approval": 1,
     "allowed": "Support Team",
     "condition": null,
-    "next_state": "Contact Customer",
+    "next_state": "Open",
     "parent": "Amazon Bad Review",
     "parentfield": "transitions",
     "parenttype": "Workflow",
-    "state": "Replace"
+    "state": "To Ship Replacement"
    },
    {
     "action": "Go Back",
     "allow_self_approval": 1,
     "allowed": "Support Team",
     "condition": null,
-    "next_state": "Contact Customer",
+    "next_state": "Open",
     "parent": "Amazon Bad Review",
     "parentfield": "transitions",
     "parenttype": "Workflow",
-    "state": "Refund"
+    "state": "To Refund"
    },
    {
     "action": "Replacement Shipped",
@@ -178,7 +178,7 @@
     "parent": "Amazon Bad Review",
     "parentfield": "transitions",
     "parenttype": "Workflow",
-    "state": "Replace"
+    "state": "To Ship Replacement"
    },
    {
     "action": "Refund Initiated",
@@ -189,14 +189,14 @@
     "parent": "Amazon Bad Review",
     "parentfield": "transitions",
     "parenttype": "Workflow",
-    "state": "Refund"
+    "state": "To Refund"
    },
    {
     "action": "Go Back",
     "allow_self_approval": 1,
     "allowed": "Support Team",
     "condition": null,
-    "next_state": "Contact Customer",
+    "next_state": "Open",
     "parent": "Amazon Bad Review",
     "parentfield": "transitions",
     "parenttype": "Workflow",
@@ -207,7 +207,7 @@
     "allow_self_approval": 1,
     "allowed": "Support Team",
     "condition": null,
-    "next_state": "Contact Customer",
+    "next_state": "Open",
     "parent": "Amazon Bad Review",
     "parentfield": "transitions",
     "parenttype": "Workflow",

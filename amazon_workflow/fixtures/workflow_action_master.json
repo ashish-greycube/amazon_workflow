@@ -32,26 +32,6 @@
  {
   "docstatus": 0,
   "doctype": "Workflow Action Master",
-  "modified": "2020-01-30 14:32:47.478820",
-  "name": "Agreed for Replace",
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null,
-  "workflow_action_name": "Agreed for Replace"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow Action Master",
-  "modified": "2020-01-30 14:33:09.026299",
-  "name": "Agreed for Refund",
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null,
-  "workflow_action_name": "Agreed for Refund"
- },
- {
-  "docstatus": 0,
-  "doctype": "Workflow Action Master",
   "modified": "2020-01-30 14:33:45.835226",
   "name": "Escalate",
   "parent": null,
@@ -128,5 +108,25 @@
   "parentfield": null,
   "parenttype": null,
   "workflow_action_name": "Bad Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2020-02-01 14:51:34.680892",
+  "name": "Replace",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "workflow_action_name": "Replace"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2020-02-01 14:51:48.118914",
+  "name": "Refund",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "workflow_action_name": "Refund"
  }
 ]
