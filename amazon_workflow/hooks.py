@@ -83,13 +83,15 @@ fixtures = ['Workflow', 'Workflow State', 'Workflow Action Master']
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Issue": {
+		"on_update": "amazon_workflow.api.update_issue_on_go_back_action",
+		"on_update_after_submit": "amazon_workflow.api.update_issue_on_go_back_action",
+		"on_change":"amazon_workflow.api.update_issue_on_go_back_action",
+		"before_save":"amazon_workflow.api.update_issue_on_go_back_action",
+		"validate":"amazon_workflow.api.update_issue_on_go_back_action"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
